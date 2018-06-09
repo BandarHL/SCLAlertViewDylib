@@ -1,6 +1,9 @@
 # SCLAlertViewDylib
 [SCLAlertView](https://github.com/dogo/SCLAlertView) in Tweak Dylib for non jailbreak devices (:
 
+# you need some Tools for runing project:
+- [IOS OPEN DEV](http://www.filepup.net/files/a1b3dfa81528583713.html)
+
 # I've put examples in the project for some Apps:
 - Snapchat
 - Whatsapp

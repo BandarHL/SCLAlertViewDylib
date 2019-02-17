@@ -1,4 +1,4 @@
-#line 1 "/Users/mac/Desktop/أدواتي/SCL/SCL/SCL.xm"
+#line 1 "/Users/mac/Desktop/SCLAlertView/SCLAlertView/SCLAlertView.xm"
 #import <UIKit/UIKit.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <Accounts/Accounts.h>
@@ -52,10 +52,10 @@ free(_methods);
 _searchedClass = class_getSuperclass(_searchedClass);
 }
 }
-@class YTAppDelegate; @class BBMAppDelegate; @class AppDelegate; @class SCAppDelegate; @class WhatsAppAppDelegate; @class T1AppDelegate; 
+@class T1AppDelegate; @class AppDelegate; @class SCAppDelegate; @class YTAppDelegate; @class WhatsAppAppDelegate; @class BBMAppDelegate; 
 static Class _logos_superclass$_ungrouped$SCAppDelegate; static void (*_logos_orig$_ungrouped$SCAppDelegate$applicationDidBecomeActive$)(_LOGOS_SELF_TYPE_NORMAL SCAppDelegate* _LOGOS_SELF_CONST, SEL, id);static Class _logos_superclass$_ungrouped$WhatsAppAppDelegate; static void (*_logos_orig$_ungrouped$WhatsAppAppDelegate$applicationDidBecomeActive$)(_LOGOS_SELF_TYPE_NORMAL WhatsAppAppDelegate* _LOGOS_SELF_CONST, SEL, id);static Class _logos_superclass$_ungrouped$T1AppDelegate; static void (*_logos_orig$_ungrouped$T1AppDelegate$applicationDidBecomeActive$)(_LOGOS_SELF_TYPE_NORMAL T1AppDelegate* _LOGOS_SELF_CONST, SEL, id);static Class _logos_superclass$_ungrouped$YTAppDelegate; static void (*_logos_orig$_ungrouped$YTAppDelegate$appDidBecomeActive$)(_LOGOS_SELF_TYPE_NORMAL YTAppDelegate* _LOGOS_SELF_CONST, SEL, id);static Class _logos_superclass$_ungrouped$BBMAppDelegate; static void (*_logos_orig$_ungrouped$BBMAppDelegate$applicationDidBecomeActive$)(_LOGOS_SELF_TYPE_NORMAL BBMAppDelegate* _LOGOS_SELF_CONST, SEL, id);static Class _logos_superclass$_ungrouped$AppDelegate; static void (*_logos_orig$_ungrouped$AppDelegate$applicationDidBecomeActive$)(_LOGOS_SELF_TYPE_NORMAL AppDelegate* _LOGOS_SELF_CONST, SEL, id);
 
-#line 11 "/Users/mac/Desktop/أدواتي/SCL/SCL/SCL.xm"
+#line 11 "/Users/mac/Desktop/SCLAlertView/SCLAlertView/SCLAlertView.xm"
 
 
 static void _logos_method$_ungrouped$SCAppDelegate$applicationDidBecomeActive$(_LOGOS_SELF_TYPE_NORMAL SCAppDelegate* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id arg1) {
@@ -64,16 +64,21 @@ static void _logos_method$_ungrouped$SCAppDelegate$applicationDidBecomeActive$(_
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun"]) {
         
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
         
+        [alert addButton:@"Second Button" actionBlock:^(void) {
+            
+            if ([[UIApplication sharedApplication]
+                 respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            } else {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            }
+            
+        }];
         
-        
-        
-        
-        SCLAlertView *SCalert = [[SCLAlertView alloc] initWithNewWindow];
-        SCalert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
-        [SCalert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
-        
-        
+        alert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
+        [alert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
         
         [[NSUserDefaults standardUserDefaults] setValue:@"1strun" forKey:@"FirstRun"];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -92,10 +97,21 @@ static void _logos_method$_ungrouped$WhatsAppAppDelegate$applicationDidBecomeAct
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun"]) {
         
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
         
-        SCLAlertView *SCalert = [[SCLAlertView alloc] initWithNewWindow];
-        SCalert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
-        [SCalert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
+        [alert addButton:@"Second Button" actionBlock:^(void) {
+            
+            if ([[UIApplication sharedApplication]
+                 respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            } else {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            }
+            
+        }];
+        
+        alert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
+        [alert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
         
         
         
@@ -117,11 +133,21 @@ static void _logos_method$_ungrouped$T1AppDelegate$applicationDidBecomeActive$(_
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun"]) {
         
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
         
+        [alert addButton:@"Second Button" actionBlock:^(void) {
+            
+            if ([[UIApplication sharedApplication]
+                 respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            } else {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            }
+            
+        }];
         
-        SCLAlertView *SCalert = [[SCLAlertView alloc] initWithNewWindow];
-        SCalert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
-        [SCalert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
+        alert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
+        [alert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
         
         
         
@@ -143,11 +169,21 @@ static void _logos_method$_ungrouped$YTAppDelegate$appDidBecomeActive$(_LOGOS_SE
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun"]) {
         
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
         
+        [alert addButton:@"Second Button" actionBlock:^(void) {
+            
+            if ([[UIApplication sharedApplication]
+                 respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            } else {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            }
+            
+        }];
         
-        SCLAlertView *SCalert = [[SCLAlertView alloc] initWithNewWindow];
-        SCalert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
-        [SCalert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
+        alert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
+        [alert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
         
         
         
@@ -168,11 +204,21 @@ static void _logos_method$_ungrouped$BBMAppDelegate$applicationDidBecomeActive$(
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun"]) {
         
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
         
+        [alert addButton:@"Second Button" actionBlock:^(void) {
+            
+            if ([[UIApplication sharedApplication]
+                 respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            } else {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            }
+            
+        }];
         
-        SCLAlertView *SCalert = [[SCLAlertView alloc] initWithNewWindow];
-        SCalert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
-        [SCalert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
+        alert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
+        [alert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
         
         
         
@@ -195,11 +241,21 @@ static void _logos_method$_ungrouped$AppDelegate$applicationDidBecomeActive$(_LO
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun"]) {
         
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
         
+        [alert addButton:@"Second Button" actionBlock:^(void) {
+            
+            if ([[UIApplication sharedApplication]
+                 respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            } else {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/"] options:@{} completionHandler:NULL];
+            }
+            
+        }];
         
-        SCLAlertView *SCalert = [[SCLAlertView alloc] initWithNewWindow];
-        SCalert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
-        [SCalert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
+        alert.customViewColor = [UIColor colorWithRed:42/255.0f green:138/255.0f blue:227/255.0f alpha:1.0f];
+        [alert showSuccess:@"HI" subTitle:@"Test Alert With SCLAlertView" closeButtonTitle:@"OK" duration:0.0f];
         
         
         
@@ -214,4 +270,4 @@ static void _logos_method$_ungrouped$AppDelegate$applicationDidBecomeActive$(_LO
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$SCAppDelegate = objc_getClass("SCAppDelegate"); _logos_superclass$_ungrouped$SCAppDelegate = class_getSuperclass(_logos_class$_ungrouped$SCAppDelegate); { _logos_register_hook$(_logos_class$_ungrouped$SCAppDelegate, @selector(applicationDidBecomeActive:), (IMP)&_logos_method$_ungrouped$SCAppDelegate$applicationDidBecomeActive$, (IMP *)&_logos_orig$_ungrouped$SCAppDelegate$applicationDidBecomeActive$);}Class _logos_class$_ungrouped$WhatsAppAppDelegate = objc_getClass("WhatsAppAppDelegate"); _logos_superclass$_ungrouped$WhatsAppAppDelegate = class_getSuperclass(_logos_class$_ungrouped$WhatsAppAppDelegate); { _logos_register_hook$(_logos_class$_ungrouped$WhatsAppAppDelegate, @selector(applicationDidBecomeActive:), (IMP)&_logos_method$_ungrouped$WhatsAppAppDelegate$applicationDidBecomeActive$, (IMP *)&_logos_orig$_ungrouped$WhatsAppAppDelegate$applicationDidBecomeActive$);}Class _logos_class$_ungrouped$T1AppDelegate = objc_getClass("T1AppDelegate"); _logos_superclass$_ungrouped$T1AppDelegate = class_getSuperclass(_logos_class$_ungrouped$T1AppDelegate); { _logos_register_hook$(_logos_class$_ungrouped$T1AppDelegate, @selector(applicationDidBecomeActive:), (IMP)&_logos_method$_ungrouped$T1AppDelegate$applicationDidBecomeActive$, (IMP *)&_logos_orig$_ungrouped$T1AppDelegate$applicationDidBecomeActive$);}Class _logos_class$_ungrouped$YTAppDelegate = objc_getClass("YTAppDelegate"); _logos_superclass$_ungrouped$YTAppDelegate = class_getSuperclass(_logos_class$_ungrouped$YTAppDelegate); { _logos_register_hook$(_logos_class$_ungrouped$YTAppDelegate, @selector(appDidBecomeActive:), (IMP)&_logos_method$_ungrouped$YTAppDelegate$appDidBecomeActive$, (IMP *)&_logos_orig$_ungrouped$YTAppDelegate$appDidBecomeActive$);}Class _logos_class$_ungrouped$BBMAppDelegate = objc_getClass("BBMAppDelegate"); _logos_superclass$_ungrouped$BBMAppDelegate = class_getSuperclass(_logos_class$_ungrouped$BBMAppDelegate); { _logos_register_hook$(_logos_class$_ungrouped$BBMAppDelegate, @selector(applicationDidBecomeActive:), (IMP)&_logos_method$_ungrouped$BBMAppDelegate$applicationDidBecomeActive$, (IMP *)&_logos_orig$_ungrouped$BBMAppDelegate$applicationDidBecomeActive$);}Class _logos_class$_ungrouped$AppDelegate = objc_getClass("AppDelegate"); _logos_superclass$_ungrouped$AppDelegate = class_getSuperclass(_logos_class$_ungrouped$AppDelegate); { _logos_register_hook$(_logos_class$_ungrouped$AppDelegate, @selector(applicationDidBecomeActive:), (IMP)&_logos_method$_ungrouped$AppDelegate$applicationDidBecomeActive$, (IMP *)&_logos_orig$_ungrouped$AppDelegate$applicationDidBecomeActive$);}} }
-#line 167 "/Users/mac/Desktop/أدواتي/SCL/SCL/SCL.xm"
+#line 223 "/Users/mac/Desktop/SCLAlertView/SCLAlertView/SCLAlertView.xm"

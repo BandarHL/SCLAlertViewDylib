@@ -1,0 +1,17 @@
+Package: com.BandarHL.SCLAlertView
+Name: SCLAlertView
+Version: 0.1-1
+Description: 
+Section: System
+Depends: firmware (>= 5.0), mobilesubstrate
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: BandarHelal
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon: 
+
